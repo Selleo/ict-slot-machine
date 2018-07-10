@@ -5,6 +5,7 @@ import getUser from './users'
 import http from 'http'
 import reader, { parseData } from './rfid'
 import redis from 'redis'
+import moment from 'moment'
 import servo from './servo'
 import sendPhoto from './queue'
 import Slack from './slack'
@@ -20,6 +21,7 @@ const server = http.createServer(app)
 const io = socketIO(server)
 const redisClient = redis.createClient()
 const slack = new Slack(process.env.SLACK_WEBHOOK, process.env.SLACK_LOG_WEBHOOK)
+const ROLL_COOLDOWN = 14400
 
 let readyForSpin = false
 let socketClient = null
@@ -27,6 +29,52 @@ let user = null
 
 app.use(webpackMiddleware(webpack(webpackConfig)))
 server.listen(3000)
+
+function _rollRequest(userId) {
+  user = getUser(userId)
+
+  if (user === undefined) {
+    slack.log(userId)
+    socketClient.emit('NOTIFY', 'error', 'please go to @czana')
+    return
+  }
+
+  if (readyForSpin) {
+    redisClient.get(userId, (_, response) => {
+      if (response === null) {
+        redisClient.set(userId, +new Date(), 'EX', ROLL_COOLDOWN, (_, response) => {
+          readyForSpin = false
+          socketClient.emit('SPIN_REQUEST')
+
+          takePhoto(userId).then(_ => {
+            // sendPhoto(user.email, userId)
+          })
+        });
+      } else {
+        socketClient.emit('NOTIFY', 'error', _generateCooldownMessage(response))
+      }
+    });
+  }
+}
+
+function _generateCooldownMessage(rollEpoch) {
+  const cooldownEpoch = parseInt(rollEpoch) + ROLL_COOLDOWN * 1000
+  const duration = moment.utc(moment(cooldownEpoch).diff(+new Date()));
+  const seconds = duration / 1000;
+
+  let format;
+
+  if (seconds > 3600) {
+    format = 'H [hours and] m [minutes]'
+  } else if (seconds > 60) {
+    format = 'm [minutes]'
+  } else {
+    format = '[only] s [seconds] :)'
+  }
+
+  const time = duration.format(format).toString()
+  return 'You need to wait ' + time + ' for the next roll!'
+};
 
 io.on('connection', client => {
   readyForSpin = true
@@ -43,27 +91,6 @@ io.on('connection', client => {
 })
 
 reader.on('data', data => {
-  const id = parseData(data)
-  user = getUser(id)
-
-  if (user === undefined) {
-    slack.log(id)
-    socketClient.emit('NOTIFY', 'error', 'please go to @czana')
-    return
-  }
-
-  if (readyForSpin) {
-    redisClient.set(id, true, 'EX', 14400, 'NX', (_, response) => {
-      if (response !== null) {
-        readyForSpin = false
-        socketClient.emit('SPIN_REQUEST')
-
-        takePhoto(id).then(_ => {
-          // sendPhoto(user.email, id)
-        })
-      } else {
-        socketClient.emit('NOTIFY', 'warn', 'not yet :)')
-      }
-    })
-  }
+  const userId = parseData(data)
+  _rollRequest(userId)
 })
