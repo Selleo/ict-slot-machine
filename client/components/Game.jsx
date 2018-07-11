@@ -50,7 +50,7 @@ export default class Game extends React.Component {
   render() {
     return (
       <div className="rollers">
-        <ToastContainer autoClose={3000} position={toast.POSITION.TOP_CENTER} />
+        <ToastContainer autoClose={5000} position={toast.POSITION.TOP_CENTER} />
         <div className="overlay" />
         {this._createRollers()}
       </div>
