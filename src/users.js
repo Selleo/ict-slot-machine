@@ -182,6 +182,10 @@ const USERS = {
   5501568626383: {
     mention: 'bob',
     email: 'w.bozek@selleo.com'
+  },
+  5501567016069: {
+    mention: 'tromik',
+    email: 't.romik@selleo.com'
   }
 }
 
