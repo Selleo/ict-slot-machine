@@ -1,13 +1,13 @@
-import HtmlWebpackPlugin from 'html-webpack-plugin'
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-export default {
-  mode: 'development',
+module.exports = {
   entry: './client/index.js',
   resolve: {
     extensions: ['.js', '.scss']
   },
   output: {
-    path: '/',
+    path: path.resolve(__dirname, 'client'),
     filename: 'bundle.js'
   },
   module: {

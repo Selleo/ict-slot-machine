@@ -11,9 +11,6 @@ import moment from 'moment'
 import Slack from './slack'
 import socketIO from 'socket.io'
 // import takePhoto from './camera'
-import webpack from 'webpack'
-import webpackConfig from '../webpack.config.js'
-import webpackMiddleware from 'webpack-dev-middleware'
 
 const app = express()
 const server = http.createServer(app)
@@ -27,7 +24,6 @@ let readyForSpin = false
 let socketClient = null
 let user = null
 
-app.use(webpackMiddleware(webpack(webpackConfig)))
 server.listen(3000)
 
 function _rollRequest(userId) {
