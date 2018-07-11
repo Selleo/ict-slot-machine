@@ -1,4 +1,4 @@
-import uniq from 'lodash/fp/uniq'
+import uniq from 'lodash/uniq'
 
 const ICONS = [
   'seven',

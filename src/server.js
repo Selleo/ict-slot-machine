@@ -1,16 +1,16 @@
 require('dotenv').config()
 
 import express from 'express'
-// import getUser from './users'
+import getUser from './users'
 import http from 'http'
-// import reader, { parseData } from './rfid'
+import reader, { parseData } from './rfid'
 import redis from 'redis'
 import moment from 'moment'
-// import servo from './servo'
-// import sendPhoto from './queue'
+import servo from './servo'
+import sendPhoto from './queue'
 import Slack from './slack'
 import socketIO from 'socket.io'
-// import takePhoto from './camera'
+import takePhoto from './camera'
 
 const app = express()
 const server = http.createServer(app)
@@ -76,21 +76,17 @@ io.on('connection', client => {
   readyForSpin = true
   socketClient = client
 
-  client.emit('SPIN_REQUEST')
-
   client.on('SPIN_ENDED', result => {
-    // readyForSpin = true
+    readyForSpin = true
 
-    client.emit('SPIN_REQUEST')
-    // if (result.win) {
-    //   if (result.cashPrize) servo.move()
-    //   slack.post(user.mention, result.icon, result.cashPrize ? '$$$' : '2 Kudos!')
-    // }
-  // })
+    if (result.win) {
+      if (result.cashPrize) servo.move()
+      slack.post(user.mention, result.icon, result.cashPrize ? '$$$' : '2 Kudos!')
+    }
   })
 })
 
-// reader.on('data', data => {
-//   const userId = parseData(data)
-//   _rollRequest(userId)
-// })
+reader.on('data', data => {
+  const userId = parseData(data)
+  _rollRequest(userId)
+})
