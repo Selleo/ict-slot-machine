@@ -2,9 +2,9 @@ import HtmlWebpackPlugin from 'html-webpack-plugin'
 
 export default {
   mode: 'development',
-  entry: './client/index.jsx',
+  entry: './client/index.js',
   resolve: {
-    extensions: ['.js', '.jsx', '.scss']
+    extensions: ['.js', '.scss']
   },
   output: {
     path: '/',
@@ -14,7 +14,7 @@ export default {
     rules: [
       {
         use: 'babel-loader',
-        test: /\.jsx$/,
+        test: /\.js$/,
         exclude: /node_modules/
       },
       {
