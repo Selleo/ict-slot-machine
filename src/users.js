@@ -190,6 +190,18 @@ const USERS = {
   5497845585440: {
     mention: 'Kacper',
     email: 'k.wozniak@selleo.com'
+  },
+  5501425432406: {
+    mention: 'cs3b',
+    email: 'm.czyz@selleo.com'
+  },
+  5501567419089: {
+    mention: 'enka',
+    email: 'e.tabak@selleo.com'
+  },
+  5501524337388: {
+    mention: 'Arkadiusz Kwaśny',
+    email: 'a.kwasny@selleo.com'
   }
 }
 
