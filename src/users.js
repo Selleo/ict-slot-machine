@@ -210,6 +210,10 @@ const USERS = {
   4402038656086: {
     mention: 'grduch',
     email: 'g.rduch@selleo.com'
+  },
+  5501522904124: {
+    mention: 'Anna Łękawa',
+    email: 'a.lekawa@selleo.com'
   }
 }
 
