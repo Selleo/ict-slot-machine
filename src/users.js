@@ -1,4 +1,4 @@
-const USERS = {
+export const USERS = {
   5501512322897: {
     mention: 'czana',
     email: 't.czana@selleo.com',
