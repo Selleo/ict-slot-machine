@@ -37,6 +37,25 @@ Alias=kiosk.service
 WantedBy=multi-user.target
 ```
 
+### /lib/systemd/system/kiosk-uploader.service
+
+```conf
+[Unit]
+Description=Kiosk Uploader
+After=systemd-user-sessions.service
+Requires=redis.service
+
+[Service]
+WorkingDirectory=/home/pi/services/
+ExecStart=/home/pi/services/uploader --watch-dir /home/pi/services/data --log-file /home/pi/services/logs/uploader.log
+IgnoreSIGPIPE=false
+Type=simple
+
+[Install]
+Alias=kiosk-uploader.service
+WantedBy=multi-user.target
+```
+
 Enable & start services:
 
 ```bash

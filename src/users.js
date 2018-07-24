@@ -223,6 +223,10 @@ export const USERS = {
   5501520079015: {
     mention: 'tb',
     email: 't.bak@selleo.com'
+  },
+  5501524317085: {
+    mention: 'kokosek',
+    email: 'j.kolonko@selleo.com'
   }
 }
 
