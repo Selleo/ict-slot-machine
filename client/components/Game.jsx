@@ -1,7 +1,7 @@
 import React from 'react'
 import Roller from './Roller'
 import socketIOClient from 'socket.io-client'
-import { logResult, resultResponse } from '../modules/result'
+import { resultResponse } from '../modules/result'
 import { ToastContainer, toast } from 'react-toastify'
 
 const ROLLERS = ['left', 'center', 'right']

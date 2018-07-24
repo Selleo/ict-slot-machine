@@ -16,26 +16,26 @@ export default class Roller extends React.Component {
   spin(startingIndex = 0, forcedSpinTo) {
     return new Promise(resolve => {
       const { count, position } = this.props
-
       let rotations = random(30, 50)
-      const animationTime = random(3, 6, true)
 
       if (isFinite(forcedSpinTo)) {
         rotations = 3 * count + forcedSpinTo - startingIndex
       }
 
-      setTimeout(() => {
-        resolve({ [position]: (startingIndex + rotations) % count })
-      }, animationTime * 1000 + 500)
+      document.querySelector(`.roller.${position}`).addEventListener(
+        'animationend',
+        () => {
+          resolve({ [position]: (startingIndex + rotations) % count })
+        },
+        { once: true }
+      )
 
       ReactDOM.render(
         <Animation
           startingIndex={startingIndex}
           position={position}
-          animationTime={animationTime}
           rotations={rotations}
           angle={this.polygon.angle}
-          offset={5}
         />,
         document.querySelector(`.styles-roller-${position}`)
       )
