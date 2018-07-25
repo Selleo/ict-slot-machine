@@ -1,7 +1,6 @@
 import React from 'react'
 
 class Slot extends React.Component {
-
   _getStyles() {
     const { polygon, number } = this.props
     const { translateZ, translateY, rotateX } = polygon.valuesFor(number)
@@ -17,8 +16,8 @@ class Slot extends React.Component {
 
   render() {
     return (
-      <div style={this._getStyles()} className='slot'>
-        <img src={ this._getIcon() } />
+      <div style={this._getStyles()} className="slot">
+        <img src={this._getIcon()} />
       </div>
     )
   }
