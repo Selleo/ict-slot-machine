@@ -45,8 +45,8 @@ export const USERS = {
     email: 'm.staskiewicz@selleo.com'
   },
   4402052972185: {
-    mention: 'dsznajder',
-    email: 'd.sznajder@selleo.com'
+    mention: 'v.kokoshko',
+    email: 'v.kokoshko@selleo.com'
   },
   4402052951115: {
     mention: 'BobrImperator',
@@ -124,7 +124,7 @@ export const USERS = {
     mention: 'tommy',
     email: 't.dudzik@selleo.com'
   },
-  5501567032772: {
+  5501568634543: {
     mention: 'synion',
     email: 's.lach@selleo.com'
   },
@@ -137,8 +137,8 @@ export const USERS = {
     email: 'b.maka@selleo.com'
   },
   4402148018063: {
-    mention: 'lemon',
-    email: 'l.gawel@selleo.com'
+    mention: 'r.pszczolka',
+    email: 'r.pszczolka@selleo.com'
   },
   4402148020376: {
     mention: 'pommy',
@@ -227,6 +227,10 @@ export const USERS = {
   5501524317085: {
     mention: 'kokosek',
     email: 'j.kolonko@selleo.com'
+  },
+  5501579549058: {
+    mention: 'janush',
+    email: 'r.januszewski@selleo.com'
   }
 }
 
