@@ -21,7 +21,7 @@ export const USERS = {
     email: 'a.pawlicka@selleo.com'
   },
   5501579525414: {
-    mention: 'Łukasz Lapczyk',
+    mention: 'kijek',
     email: 'l.lapczyk@selleo.com'
   },
   4402143914145: {
@@ -88,7 +88,7 @@ export const USERS = {
     mention: 'irek',
     email: 'i.skrobis@selleo.com'
   },
-  5501412852320: {
+  5501555273892: {
     mention: 'wieczorek',
     email: 'm.wieczorek@selleo.com'
   },
@@ -120,7 +120,7 @@ export const USERS = {
     mention: 'b.boruta',
     email: 'b.boruta@selleo.com'
   },
-  5501545113636: {
+  8798880124543: {
     mention: 'tommy',
     email: 't.dudzik@selleo.com'
   },
@@ -160,7 +160,7 @@ export const USERS = {
     mention: 'dadesigner',
     email: 'l.siwek@selleo.com'
   },
-  5501555277225: {
+  5501579533248: {
     mention: 'Natalia',
     email: 'n.milerska@selleo.com'
   },
@@ -208,7 +208,7 @@ export const USERS = {
     mention: 'chalec',
     email: 'p.chalecki@selleo.com'
   },
-  4402038656086: {
+  8799048219174: {
     mention: 'grduch',
     email: 'g.rduch@selleo.com'
   },
@@ -228,12 +228,53 @@ export const USERS = {
     mention: 'kokosek',
     email: 'j.kolonko@selleo.com'
   },
-  5501579549058: {
-    mention: 'janush',
-    email: 'r.januszewski@selleo.com'
+  8798909973259: {
+    mention: 'Gosia',
+    email: 'm.mazurek@selleo.com'
+  },
+  8798880286667: {
+    mention: 'm.cholewka',
+    email: 'm.cholewka@selleo.com'
+  },
+  4402146842766: {
+    mention: 'a.nikiel',
+    email: 'a.nikiel@selleo.com'
+  },
+  8798880280226: {
+    mention: 'g.dopart',
+    email: 'g.dopart@selleo.com'
+  },
+  8798961148022: {
+    mention: 'Robert Mrowiec',
+    email: 'r.mrowiec@selleo.com'
+  },
+  8798957519070: {
+    mention: 'Drakeoon',
+    email: 'd.szczepanik@selleo.com'
+  },
+  8798909519385: {
+    mention: 't.swietek',
+    email: 't.swietek@selleo.com'
+  },
+  8798880303622: {
+    mention: 'm.grygierczyk',
+    email: 'm.grygierczyk@selleo.com'
+  },
+  8798880304899: {
+    mention: 'd.kawiak',
+    email: 'd.kawiak@selleo.com'
+  },
+  8798954514628: {
+    mention: 'p.peleszynski',
+    email: 'p.peleszynski@selleo.com'
+  },
+  8798880340631: {
+    mention: 'd.holisz',
+    email: 'd.holisz@selleo.com'
   }
 }
 
 export default id => {
   return USERS[id]
 }
+

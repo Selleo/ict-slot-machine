@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom'
 import Slot from './Slot'
 import Animation from './Animation'
 import Polygon, { getR } from '../modules/polygon'
-import { times, random } from 'lodash'
+import times from 'lodash/times'
+import random from 'lodash/random'
 
 export default class Roller extends React.Component {
   constructor(props) {
