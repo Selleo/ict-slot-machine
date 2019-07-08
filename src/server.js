@@ -27,15 +27,15 @@ let user = null
 server.listen(3000)
 
 function _rollRequest(userId) {
-  user = getUser(userId)
-
-  if (user === undefined) {
-    slack.log(userId)
-    socketClient.emit('NOTIFY', 'error', 'please go to @czana')
-    return
-  }
-
   if (readyForSpin) {
+    user = getUser(userId)
+
+    if (user === undefined) {
+      slack.log(userId)
+      socketClient.emit('NOTIFY', 'error', 'please go to @czana')
+      return
+    }
+
     redisClient.get(userId, (_, response) => {
       if (response === null) {
         redisClient.set(userId, +new Date(), 'EX', ROLL_COOLDOWN, (_, response) => {
