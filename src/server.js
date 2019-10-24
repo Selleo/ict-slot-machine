@@ -11,6 +11,7 @@ import sendPhoto from './queue'
 import Slack from './slack'
 import socketIO from 'socket.io'
 import takePhoto from './camera'
+import slackApiRequest from './slackApiRequest'
 
 const app = express()
 const server = http.createServer(app)
@@ -41,24 +42,25 @@ function _rollRequest(userId) {
         redisClient.set(userId, +new Date(), 'EX', ROLL_COOLDOWN, (_, response) => {
           readyForSpin = false
           socketClient.emit('SPIN_REQUEST')
+          _addSlackReminder(user)
 
           takePhoto(userId).then(_ => {
             // sendPhoto(user.email, userId)
           })
-        });
+        })
       } else {
         socketClient.emit('NOTIFY', 'error', _generateCooldownMessage(response))
       }
-    });
+    })
   }
 }
 
 function _generateCooldownMessage(rollEpoch) {
   const cooldownEpoch = parseInt(rollEpoch) + ROLL_COOLDOWN * 1000
-  const duration = moment.utc(moment(cooldownEpoch).diff(+new Date()));
-  const seconds = duration / 1000;
+  const duration = moment.utc(moment(cooldownEpoch).diff(+new Date()))
+  const seconds = duration / 1000
 
-  let format;
+  let format
 
   if (seconds > 3600) {
     format = 'H [hours and] m [minutes]'
@@ -70,7 +72,7 @@ function _generateCooldownMessage(rollEpoch) {
 
   const time = duration.format(format).toString()
   return 'You need to wait ' + time + ' for the next roll!'
-};
+}
 
 io.on('connection', client => {
   readyForSpin = true
@@ -85,6 +87,21 @@ io.on('connection', client => {
     }
   })
 })
+
+const _addSlackReminder = (user) => {
+  if ('string' !== typeof user.slackUserId) {
+    return
+  }
+
+  slackApiRequest({
+    command: 'reminders.add',
+    body: {
+      text: 'about using One Armed Bandit again',
+      time: `in ${ROLL_COOLDOWN} seconds`,
+      user: user.slackUserId
+    }
+  })
+}
 
 reader.on('data', data => {
   const userId = parseData(data)
