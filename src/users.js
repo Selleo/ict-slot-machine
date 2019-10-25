@@ -9,12 +9,13 @@ export const USERS = {
     email: 'b.wojtowicz@selleo.com'
   },
   5501412812678: {
-    mention: 'p.kuwik',
-    email: 'p.kuwik@selleo.com'
+    mention: 'Piotr',
+    email: 'p.motak@selleo.com'
   },
   4402038648119: {
     mention: 'm.polakowski',
-    email: 'm.polakowski@selleo.com'
+    email: 'm.polakowski@selleo.com',
+    slackUserId: 'U6S0A54MP'
   },
   5501557468263: {
     mention: 'apawlicka',
@@ -120,7 +121,7 @@ export const USERS = {
     mention: 'b.boruta',
     email: 'b.boruta@selleo.com'
   },
-  8798880124543: {
+  9899584476032: {
     mention: 'tommy',
     email: 't.dudzik@selleo.com'
   },
@@ -216,7 +217,7 @@ export const USERS = {
     mention: 'Anna Łękawa',
     email: 'a.lekawa@selleo.com'
   },
-  4402036995525: {
+  9899621389593: {
     mention: 'dariusz_wylon',
     email: 'd.wylon@selleo.com'
   },
@@ -271,6 +272,34 @@ export const USERS = {
   8798880340631: {
     mention: 'd.holisz',
     email: 'd.holisz@selleo.com'
+  },
+  8799048379061: {
+    mention: 'Piotr',
+    email: 'p.motak@selleo.com'
+  },
+  5501532454452: {
+    mention: 'simon',
+    email: 's.kieloch@selleo.com'
+  },
+  8798958669089: {
+    mention: 'alina',
+    email: 'a.turek@selleo.com'
+  },
+  9899584482495: {
+    mention: 'Jasiek',
+    email: 'j.gajdowicz@selleo.com'
+  },
+  9899584484256: {
+    mention: 'DLoranc',
+    email: 'd.loranc@selleo.com'
+  },
+  9899621295530: {
+    mention: 'l.kubok',
+    email: 'l.kubok@selleo.com'
+  },
+  9899621396540: {
+    mention: 'ewa',
+    email: 'e.wydra@selleo.com'
   }
 }
 
