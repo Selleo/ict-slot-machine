@@ -300,10 +300,13 @@ export const USERS = {
   9899621396540: {
     mention: 'ewa',
     email: 'e.wydra@selleo.com'
+  },
+  9899621294255: {
+    mention: 'Adam',
+    email: 'a.wozny@selleo.com'
   }
 }
 
 export default id => {
   return USERS[id]
 }
-
