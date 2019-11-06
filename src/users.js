@@ -23,11 +23,13 @@ export const USERS = {
   },
   5501579525414: {
     mention: 'kijek',
-    email: 'l.lapczyk@selleo.com'
+    email: 'l.lapczyk@selleo.com',
+    slackUserId: 'U9JJY5F53'
   },
   4402143914145: {
     mention: 'kovson',
-    email: 'k.gren@selleo.com'
+    email: 'k.gren@selleo.com',
+    slackUserId: 'U6SGZ5G1Y'
   },
   5501567041255: {
     mention: 'stevo',
@@ -119,7 +121,8 @@ export const USERS = {
   },
   5501520047650: {
     mention: 'b.boruta',
-    email: 'b.boruta@selleo.com'
+    email: 'b.boruta@selleo.com',
+    slackUserId: 'UA054LMFU'
   },
   9899584476032: {
     mention: 'tommy',
@@ -227,7 +230,8 @@ export const USERS = {
   },
   5501524317085: {
     mention: 'kokosek',
-    email: 'j.kolonko@selleo.com'
+    email: 'j.kolonko@selleo.com',
+    slackUserId: 'U6TCUCXP0'
   },
   8798909973259: {
     mention: 'Gosia',
