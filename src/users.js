@@ -103,10 +103,6 @@ export const USERS = {
     mention: 'Grzegorz Zaręba',
     email: 'g.zareba@selleo.com'
   },
-  4402128276593: {
-    mention: 'sznajderm',
-    email: 'm.sznajder@selleo.com'
-  },
   5501566395940: {
     mention: 'arekm',
     email: 'a.machalica@selleo.com'
@@ -156,10 +152,6 @@ export const USERS = {
     mention: 'beu',
     email: 'r.jedryszczak@selleo.com'
   },
-  5501561213025: {
-    mention: 'dude',
-    email: 'p.duda@selleo.com'
-  },
   4402038631671: {
     mention: 'dadesigner',
     email: 'l.siwek@selleo.com'
@@ -168,17 +160,9 @@ export const USERS = {
     mention: 'Natalia',
     email: 'n.milerska@selleo.com'
   },
-  5501535878785: {
-    mention: 'zebra',
-    email: 'p.wolanin@selleo.com'
-  },
   4402038639638: {
     mention: 'Kasia',
     email: 'k.babinska@selleo.com'
-  },
-  5501561394339: {
-    mention: 'kantorm',
-    email: 'm.kantor@selleo.com'
   },
   4402036975254: {
     mention: 'dominikduda',
@@ -244,10 +228,6 @@ export const USERS = {
   4402146842766: {
     mention: 'a.nikiel',
     email: 'a.nikiel@selleo.com'
-  },
-  8798880280226: {
-    mention: 'g.dopart',
-    email: 'g.dopart@selleo.com'
   },
   8798961148022: {
     mention: 'Robert Mrowiec',
