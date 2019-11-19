@@ -235,7 +235,8 @@ export const USERS = {
   },
   8798957519070: {
     mention: 'Drakeoon',
-    email: 'd.szczepanik@selleo.com'
+    email: 'd.szczepanik@selleo.com',
+    slackUserId: 'UHH0CMSG4'
   },
   8798909519385: {
     mention: 't.swietek',
