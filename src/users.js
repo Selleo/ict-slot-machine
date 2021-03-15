@@ -68,7 +68,7 @@ export const USERS = {
     email: 'j.kisiolek@selleo.com'
   },
   5498835649833: {
-    mention: 'robert',
+    mention: 'robson',
     email: 'r.harezlak@selleo.com'
   },
   4402037015153: {
@@ -128,10 +128,6 @@ export const USERS = {
     mention: 'synion',
     email: 's.lach@selleo.com'
   },
-  4402037004841: {
-    mention: 'bard',
-    email: 'b.danek@selleo.com'
-  },
   4402038678975: {
     mention: 'bmaka',
     email: 'b.maka@selleo.com'
@@ -148,7 +144,7 @@ export const USERS = {
     mention: 'mark',
     email: 'm.caputa@selleo.com'
   },
-  5501425332945: {
+  47280063141906: {
     mention: 'beu',
     email: 'r.jedryszczak@selleo.com'
   },
@@ -270,10 +266,6 @@ export const USERS = {
     mention: 'alina',
     email: 'a.turek@selleo.com'
   },
-  9899584482495: {
-    mention: 'Jasiek',
-    email: 'j.gajdowicz@selleo.com'
-  },
   9899584484256: {
     mention: 'DLoranc',
     email: 'd.loranc@selleo.com'
@@ -289,6 +281,18 @@ export const USERS = {
   9899621294255: {
     mention: 'Adam',
     email: 'a.wozny@selleo.com'
+  },
+  47280065230428: {
+    mention: 'Bernadka',
+    email: 'b.fryczkowska@selleo.com'
+  },
+  47280063507866: {
+    mention: 'Przemek Fijak',
+    email: 'p.fijak@selleo.com'
+  },
+  47280033467905: {
+    mention: 'Tomasz Prochowicz',
+    email: 't.prochowicz@selleo.com'
   }
 }
 
