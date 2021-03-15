@@ -33,7 +33,7 @@ function _rollRequest(userId) {
 
     if (user === undefined) {
       slack.log(userId)
-      socketClient.emit('NOTIFY', 'error', 'please go to @czana')
+      socketClient.emit('NOTIFY', 'error', 'please go to @d.holisz')
       return
     }
 
