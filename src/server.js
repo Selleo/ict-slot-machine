@@ -83,7 +83,7 @@ io.on('connection', client => {
 
     if (result.win) {
       if (result.cashPrize) servo.move()
-      slack.post(user.mention, result.icon, result.cashPrize ? '$$$' : '2 Kudos!')
+      slack.post(user.mention, result.icon, result.cashPrize ? '5' : '2!')
     }
   })
 })

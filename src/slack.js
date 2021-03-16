@@ -11,7 +11,7 @@ export default class Slack {
     const result = join(times(3, () => `:slot_${icon}:`), '')
 
     this.slack.send({
-      text: `<!here> <@${winner}> just got ${result} and won ${reward}!`,
+      text: `<!here> <@${winner}> just got ${result} and won ${reward} kudos!`,
       username: 'Slot Machine'
     })
   }
