@@ -47,10 +47,6 @@ export const USERS = {
     mention: 'mikoscz',
     email: 'm.staskiewicz@selleo.com'
   },
-  4402052972185: {
-    mention: 'v.kokoshko',
-    email: 'v.kokoshko@selleo.com'
-  },
   4402052951115: {
     mention: 'BobrImperator',
     email: 'b.dudzik@selleo.com'
@@ -192,7 +188,7 @@ export const USERS = {
     mention: 'chalec',
     email: 'p.chalecki@selleo.com'
   },
-  8799048219174: {
+  48382517907206: {
     mention: 'grduch',
     email: 'g.rduch@selleo.com'
   },
@@ -221,7 +217,7 @@ export const USERS = {
     mention: 'm.cholewka',
     email: 'm.cholewka@selleo.com'
   },
-  4402146842766: {
+  8798880124543: {
     mention: 'a.nikiel',
     email: 'a.nikiel@selleo.com'
   },
@@ -237,10 +233,6 @@ export const USERS = {
   8798909519385: {
     mention: 't.swietek',
     email: 't.swietek@selleo.com'
-  },
-  8798880303622: {
-    mention: 'm.grygierczyk',
-    email: 'm.grygierczyk@selleo.com'
   },
   8798880304899: {
     mention: 'd.kawiak',
@@ -275,7 +267,7 @@ export const USERS = {
     email: 'l.kubok@selleo.com'
   },
   9899621396540: {
-    mention: 'ewa',
+    mention: 'Ewa',
     email: 'e.wydra@selleo.com'
   },
   9899621294255: {
@@ -293,6 +285,58 @@ export const USERS = {
   47280033467905: {
     mention: 'Tomasz Prochowicz',
     email: 't.prochowicz@selleo.com'
+  },
+  8798880339352: {
+    mention: 'Wiola',
+    email: 'w.wiesiak@selleo.com'
+  },
+  47280066381150: {
+    mention: 'Kudłaty',
+    email: 'w.rupik@selleo.com'
+  },
+  9899637361389: {
+    mention: 'Mateusz Dobija',
+    email: 'm.dobija@selleo.com'
+  },
+  47280089905189: {
+    mention: 'KasiaL',
+    email: 'k.legien@selleo.com'
+  },
+  38486395505609: {
+    mention: 'Asia H',
+    email: 'a.honkisz@selleo.com'
+  },
+  47280031650744: {
+    mention: 'Michał F',
+    email: 'm.firszt@selleo.com'
+  },
+  47280088158136: {
+    mention: 'david',
+    email: 'd.kachel@selleo.com'
+  },
+  5501555271089: {
+    mention: 'a.surma',
+    email: 'a.surma@selleo.com'
+  },
+  8799049564353: {
+    mention: 'Kajetan Boruta',
+    email: 'k.boruta@selleo.com'
+  },
+  5501561394339: {
+    mention: 'Mateusz Matejko',
+    email: 'm.matejko@selleo.com'
+  },
+  8798880303622: {
+    mention: 'Agata Zyla',
+    email: 'a.zyla@selleo.com'
+  },
+  9899584482495: {
+    mention: 'tomeQAtomek',
+    email: 't.jakobiec@selleo.com'
+  },
+  47280031890667: {
+    mention: 'Ania Pawlik',
+    email: 'a.pawlik@selleo.com'
   }
 }
 
