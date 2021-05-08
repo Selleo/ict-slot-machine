@@ -50,6 +50,7 @@ export default class Game extends React.Component {
   render() {
     return (
       <div className="rollers">
+        <div style={{background:'hotpink',position:'absolute',zIndex:'1333',top:'50px',left: '50%'}}><button onClick={()=>this.socket.emit('SPIN_REQUEST')}>test</button></div>
         <ToastContainer autoClose={5000} position={toast.POSITION.TOP_CENTER} />
         <div className="overlay" />
         {this._createRollers()}

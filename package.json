@@ -24,7 +24,7 @@
     "react-dom": "^16.4.1",
     "react-toastify": "^4.1.0",
     "redis": "^2.8.0",
-    "serialport": "^6.2.1",
+    "serialport": "^9.0.7",
     "slack-webhook": "^1.0.0",
     "socket.io": "^2.1.1",
     "socket.io-client": "^2.1.1"

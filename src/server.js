@@ -6,7 +6,7 @@ import http from 'http'
 import reader, { parseData } from './rfid'
 import redis from 'redis'
 import moment from 'moment'
-import servo from './servo'
+// import servo from './servo'
 import sendPhoto from './queue'
 import Slack from './slack'
 import socketIO from 'socket.io'
@@ -82,7 +82,7 @@ io.on('connection', client => {
     readyForSpin = true
 
     if (result.win) {
-      if (result.cashPrize) servo.move()
+      // if (result.cashPrize) servo.move()
       slack.post(user.mention, result.icon, result.cashPrize ? '5' : '2!')
     }
   })
