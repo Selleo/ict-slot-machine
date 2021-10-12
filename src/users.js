@@ -320,6 +320,10 @@ export const USERS = {
   5501523650653: {
     mention: 'synion',
     email: 's.lach@selleo.com'
+  },
+  18693323787281: {
+    mention: 'matro',
+    email: 'm.troszczynski'
   }
 }
 
