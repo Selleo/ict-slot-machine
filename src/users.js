@@ -309,7 +309,7 @@ export const USERS = {
     mention: 'tomeQAtomek',
     email: 't.jakobiec@selleo.com'
   },
-  47280031890667: {
+  18693326756786: {
     mention: 'Ania Pawlik',
     email: 'a.pawlik@selleo.com'
   },
@@ -323,7 +323,11 @@ export const USERS = {
   },
   18693323787281: {
     mention: 'matro',
-    email: 'm.troszczynski'
+    email: 'm.troszczynski@selleo.com'
+  },
+  18693305531495: {
+    mention: 'Dorota',
+    email: 'd.lukojc@selleo.com'
   }
 }
 
