@@ -71,7 +71,7 @@ export const USERS = {
     mention: 'dawid',
     email: 'd.poslinski@selleo.com'
   },
-  4402148012151: {
+  8798880830231: {
     mention: 'lukasz_pawlik',
     email: 'l.pawlik@selleo.com'
   },
@@ -173,8 +173,8 @@ export const USERS = {
     email: 'm.czyz@selleo.com'
   },
   5501524328654: {
-    mention: 'Arkadiusz Kwaśny',
-    email: 'a.kwasny@selleo.com'
+    mention: 'Klaudia Krawczyk',
+    email: 'k.krawczyk@selleo.com'
   },
   5501425353830: {
     mention: 'chalec',
@@ -197,9 +197,8 @@ export const USERS = {
     email: 't.bak@selleo.com'
   },
   5501524317085: {
-    mention: 'kokosek',
-    email: 'j.kolonko@selleo.com',
-    slackUserId: 'U6TCUCXP0'
+    mention: 'tomasz-zwak',
+    email: 't.zwak@selleo.com'
   },
   8798909973259: {
     mention: 'Gosia',
@@ -266,16 +265,12 @@ export const USERS = {
     email: 't.prochowicz@selleo.com'
   },
   8798880339352: {
-    mention: 'Wiola',
-    email: 'w.piesiak@selleo.com'
-  },
-  47280066381150: {
-    mention: 'Kudłaty',
-    email: 'w.rupik@selleo.com'
+    mention: 'mateusz',
+    email: 'm.suplat@selleo.com'
   },
   9899637361389: {
-    mention: 'Mateusz Dobija',
-    email: 'm.dobija@selleo.com'
+    mention: 'murmeltier',
+    email: 'm.zupa@selleo.com'
   },
   47280063507866: {
     mention: 'Asia H',
@@ -328,7 +323,39 @@ export const USERS = {
   18693305531495: {
     mention: 'Dorota',
     email: 'd.lukojc@selleo.com'
-  }
+  },
+  18693298327337: {
+    mention: 'm.klejdysz',
+    email: 'm.klejdysz@selleo.com'
+  },
+  18693298344821: {
+    mention: 'JWilk',
+    email: 'j.wilk@selleo.com'
+  },
+  18693617201061: {
+    mention: 'milosz.zajonc',
+    email: 'm.zajonc@selleo.com'
+  },
+  18693298349889: {
+    mention: 'ciupkajakub',
+    email: 'j.ciupka@selleo.com'
+  },
+  18693617124495: {
+    mention: 'Monika',
+    email: 'm.dziubkorczynska@selleo.com'
+  },
+  18693617206735: {
+    mention: 'd.obajtek',
+    email: 'd.obajtek@selleo.com'
+  },
+  18693617118566: {
+    mention: 'Anna Bala',
+    email: 'a.bala@selleo.com'
+  },
+  18693305554124: {
+    mention: 'Adrian Pilch',
+    email: 'a.pilch@selleo.com'
+  },
 }
 
 export default id => {
