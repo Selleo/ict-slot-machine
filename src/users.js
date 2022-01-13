@@ -36,8 +36,8 @@ export const USERS = {
     email: 'b.kosmowski@selleo.com'
   },
   4402143917759: {
-    mention: 'Krzysztof Golasik',
-    email: 'k.golasik@selleo.com'
+    mention: 'U02SUTZ4LN5',
+    email: 'a.konopka@selleo.com'
   },
   4402038639377: {
     mention: 'Justyna',
