@@ -71,10 +71,6 @@ export const USERS = {
     mention: 'dawid',
     email: 'd.poslinski@selleo.com'
   },
-  8798880830231: {
-    mention: 'lukasz_pawlik',
-    email: 'l.pawlik@selleo.com'
-  },
   5501574153520: {
     mention: 'tgn',
     email: 't.noworyta@selleo.com'
@@ -125,8 +121,8 @@ export const USERS = {
     email: 'b.maka@selleo.com'
   },
   4402148018063: {
-    mention: 'r.pszczolka',
-    email: 'r.pszczolka@selleo.com'
+    mention: 'U031677E0NR',
+    email: 'k.poziomek@selleo.com'
   },
   4402148020376: {
     mention: 'pommy',
@@ -145,8 +141,8 @@ export const USERS = {
     email: 'l.siwek@selleo.com'
   },
   5501579533248: {
-    mention: 'Natalia',
-    email: 'n.milerska@selleo.com'
+    mention: 'U032XAEHN3V',
+    email: 's.krasny@selleo.com'
   },
   4402038639638: {
     mention: 'Kasia',
@@ -243,10 +239,6 @@ export const USERS = {
   9899584484256: {
     mention: 'DLoranc',
     email: 'd.loranc@selleo.com'
-  },
-  9899621295530: {
-    mention: 'l.kubok',
-    email: 'l.kubok@selleo.com'
   },
   9899621396540: {
     mention: 'Ewa',
