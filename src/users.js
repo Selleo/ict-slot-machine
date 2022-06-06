@@ -129,8 +129,8 @@ export const USERS = {
     email: 'k.pomykacz@selleo.com'
   },
   5501522899144: {
-    mention: 'mark',
-    email: 'm.caputa@selleo.com'
+    mention: 'U02J3EBAGRH',
+    email: 'm.suplat@selleo.com'
   },
   47280063141906: {
     mention: 'beu',
@@ -256,10 +256,6 @@ export const USERS = {
     mention: 'Tomasz Prochowicz',
     email: 't.prochowicz@selleo.com'
   },
-  8798880339352: {
-    mention: 'mateusz',
-    email: 'm.suplat@selleo.com'
-  },
   9899637361389: {
     mention: 'murmeltier',
     email: 'm.zupa@selleo.com'
@@ -347,6 +343,10 @@ export const USERS = {
   18693305554124: {
     mention: 'Adrian Pilch',
     email: 'a.pilch@selleo.com'
+  },
+  18693438731203: {
+    mention: 'U03HCL9CL1M',
+    email: 'i.dolotov@selleo.com'
   },
 }
 
