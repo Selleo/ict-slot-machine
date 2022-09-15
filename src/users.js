@@ -325,7 +325,7 @@ export const USERS = {
     email: 'm.zajonc@selleo.com'
   },
   18693298349889: {
-    mention: 'ciupkajakub',
+    mention: 'U02LJT07GE4',
     email: 'j.ciupka@selleo.com'
   },
   18693617123977: {
@@ -359,6 +359,10 @@ export const USERS = {
   18693438708651: {
     mention: 'U0352E4J5SP',
     email: 'a.jachymek@selleo.com'
+  },
+  8798961148022: {
+    mention: 'U0229MYJUJJ',
+    email: 't.kielar@selleo.com'
   },
 }
 
