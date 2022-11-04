@@ -356,6 +356,10 @@ export const USERS = {
     mention: 'U02LJT05LTA',
     email: 'm.zajonc@selleo.com'
   },
+  5501524337388: {
+    mention: 'U0496KMULQL',
+    email: 'k.zontek@selleo.com'
+  },
 }
 
 export default id => {
