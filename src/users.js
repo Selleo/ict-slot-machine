@@ -157,8 +157,8 @@ export const USERS = {
     email: 'm.hubert@selleo.com',
   },
   5501425353830: {
-    mention: 'U7XJUDWFK',
-    email: 'p.chalecki@selleo.com',
+    mention: 'U04D8P7AC1H',
+    email: 's.kardys@selleo.com',
   },
   48382517907206: {
     mention: 'U6VMZU3CY',
