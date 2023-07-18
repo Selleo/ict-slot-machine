@@ -1,5 +1,12 @@
 # Slot machine
 
+## Prerequisites
+
+```
+sudo apt install unclutter
+```
+
+
 ## Services setup
 
 ### /lib/systemd/system/kiosk-cursor.service
