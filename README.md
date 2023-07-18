@@ -19,6 +19,7 @@ After=systemd-user-sessions.service
 [Service]
 ExecStart=/usr/bin/unclutter -idle 1
 User=pi
+Group=pi
 
 [Install]
 Alias=kiosk-cursor.service
@@ -38,6 +39,8 @@ ExecStart=/home/pi/projects/oab/start.sh
 LimitNOFILE=4096
 IgnoreSIGPIPE=false
 Type=simple
+User=pi
+Group=pi
 
 [Install]
 Alias=kiosk.service
