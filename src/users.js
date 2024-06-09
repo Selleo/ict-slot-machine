@@ -8,19 +8,6 @@ export const USERS = {
     mention: 'bart',
     email: 'b.wojtowicz@selleo.com'
   },
-  5501412812678: {
-    mention: 'Piotr',
-    email: 'p.motak@selleo.com'
-  },
-  4402038648119: {
-    mention: 'm.polakowski',
-    email: 'm.polakowski@selleo.com',
-    slackUserId: 'U6S0A54MP'
-  },
-  5501557468263: {
-    mention: 'apawlicka',
-    email: 'a.pawlicka@selleo.com'
-  },
   5501579525414: {
     mention: 'kijek',
     email: 'l.lapczyk@selleo.com',
@@ -35,29 +22,13 @@ export const USERS = {
     mention: 'stevo',
     email: 'b.kosmowski@selleo.com'
   },
-  4402143917759: {
-    mention: 'Krzysztof Golasik',
-    email: 'k.golasik@selleo.com'
-  },
-  4402038639377: {
-    mention: 'KK',
-    email: 'k.korczynski@selleo.com'
-  },
   5501550893967: {
     mention: 'mikoscz',
     email: 'm.staskiewicz@selleo.com'
   },
-  4402052951115: {
-    mention: 'BobrImperator',
-    email: 'b.dudzik@selleo.com'
-  },
   4402128343148: {
     mention: 'matts',
     email: 'm.skrobis@selleo.com'
-  },
-  5501493914965: {
-    mention: 'renerte',
-    email: 'd.suchy@selleo.com'
   },
   4402148028600: {
     mention: 'jarcos',
@@ -70,10 +41,6 @@ export const USERS = {
   4402037015153: {
     mention: 'dawid',
     email: 'd.poslinski@selleo.com'
-  },
-  4402148012151: {
-    mention: 'lukasz_pawlik',
-    email: 'l.pawlik@selleo.com'
   },
   5501574153520: {
     mention: 'tgn',
@@ -121,36 +88,12 @@ export const USERS = {
     email: 't.dudzik@selleo.com'
   },
   5501568634543: {
-    mention: 'synion',
+    mention: 'Szymek ;)',
     email: 's.lach@selleo.com'
   },
-  4402038678975: {
-    mention: 'bmaka',
-    email: 'b.maka@selleo.com'
-  },
   4402148018063: {
-    mention: 'r.pszczolka',
+    mention: 'robert',
     email: 'r.pszczolka@selleo.com'
-  },
-  4402148020376: {
-    mention: 'pommy',
-    email: 'k.pomykacz@selleo.com'
-  },
-  5501522899144: {
-    mention: 'mark',
-    email: 'm.caputa@selleo.com'
-  },
-  47280063141906: {
-    mention: 'beu',
-    email: 'r.jedryszczak@selleo.com'
-  },
-  4402038631671: {
-    mention: 'dadesigner',
-    email: 'l.siwek@selleo.com'
-  },
-  5501579533248: {
-    mention: 'Natalia',
-    email: 'n.milerska@selleo.com'
   },
   4402038639638: {
     mention: 'Kasia',
@@ -168,33 +111,13 @@ export const USERS = {
     mention: 'tromik',
     email: 't.romik@selleo.com'
   },
-  5497845585440: {
-    mention: 'Kacper',
-    email: 'k.wozniak@selleo.com'
-  },
-  5501425432406: {
-    mention: 'cs3b',
-    email: 'm.czyz@selleo.com'
-  },
-  5501567419089: {
-    mention: 'enka',
-    email: 'e.tabak@selleo.com'
-  },
   5501524337388: {
     mention: 'Arkadiusz Kwaśny',
     email: 'a.kwasny@selleo.com'
   },
-  5501425353830: {
-    mention: 'chalec',
-    email: 'p.chalecki@selleo.com'
-  },
   48382517907206: {
     mention: 'grduch',
     email: 'g.rduch@selleo.com'
-  },
-  5501522904124: {
-    mention: 'Anna Łękawa',
-    email: 'a.lekawa@selleo.com'
   },
   9899621389593: {
     mention: 'dariusz_wylon',
@@ -204,67 +127,25 @@ export const USERS = {
     mention: 'tb',
     email: 't.bak@selleo.com'
   },
-  5501524317085: {
-    mention: 'kokosek',
-    email: 'j.kolonko@selleo.com',
-    slackUserId: 'U6TCUCXP0'
-  },
-  8798909973259: {
-    mention: 'Gosia',
-    email: 'm.mazurek@selleo.com'
-  },
-  8798880286667: {
-    mention: 'm.cholewka',
-    email: 'm.cholewka@selleo.com'
-  },
-  8798880124543: {
-    mention: 'a.nikiel',
-    email: 'a.nikiel@selleo.com'
-  },
-  8798961148022: {
-    mention: 'Robert Mrowiec',
-    email: 'r.mrowiec@selleo.com'
-  },
-  8798957519070: {
-    mention: 'Drakeoon',
-    email: 'd.szczepanik@selleo.com',
-    slackUserId: 'UHH0CMSG4'
-  },
-  8798909519385: {
-    mention: 't.swietek',
-    email: 't.swietek@selleo.com'
-  },
   8798880304899: {
-    mention: 'd.kawiak',
+    mention: 'Dawid Kawiak',
     email: 'd.kawiak@selleo.com'
   },
   8798954514628: {
-    mention: 'p.peleszynski',
+    mention: 'Przemek',
     email: 'p.peleszynski@selleo.com'
-  },
-  8798880340631: {
-    mention: 'd.holisz',
-    email: 'd.holisz@selleo.com'
-  },
-  8799048379061: {
-    mention: 'Piotr',
-    email: 'p.motak@selleo.com'
   },
   5501532454452: {
     mention: 'simon',
     email: 's.kieloch@selleo.com'
   },
   8798958669089: {
-    mention: 'alina',
+    mention: 'Alina',
     email: 'a.turek@selleo.com'
   },
   9899584484256: {
-    mention: 'DLoranc',
+    mention: 'd.loranc',
     email: 'd.loranc@selleo.com'
-  },
-  9899621295530: {
-    mention: 'l.kubok',
-    email: 'l.kubok@selleo.com'
   },
   9899621396540: {
     mention: 'Ewa',
@@ -278,36 +159,16 @@ export const USERS = {
     mention: 'Bernadka',
     email: 'b.fryczkowska@selleo.com'
   },
-  47280063507866: {
-    mention: 'Przemek Fijak',
-    email: 'p.fijak@selleo.com'
-  },
-  47280033467905: {
-    mention: 'Tomasz Prochowicz',
-    email: 't.prochowicz@selleo.com'
-  },
-  8798880339352: {
-    mention: 'Wiola',
-    email: 'w.piesiak@selleo.com'
-  },
-  47280066381150: {
-    mention: 'Kudłaty',
-    email: 'w.rupik@selleo.com'
-  },
   9899637361389: {
-    mention: 'Mateusz Dobija',
+    mention: 'mateusz',
     email: 'm.dobija@selleo.com'
   },
   47280089905189: {
-    mention: 'KasiaL',
+    mention: 'Kasia L',
     email: 'k.legien@selleo.com'
   },
-  38486395505609: {
-    mention: 'Asia H',
-    email: 'a.honkisz@selleo.com'
-  },
   47280031650744: {
-    mention: 'Michał F',
+    mention: 'Michał Firszt',
     email: 'm.firszt@selleo.com'
   },
   47280088158136: {
@@ -326,26 +187,10 @@ export const USERS = {
     mention: 'Mateusz Matejko',
     email: 'm.matejko@selleo.com'
   },
-  8798880303622: {
-    mention: 'Agata Zyla',
-    email: 'a.zyla@selleo.com'
-  },
   9899584482495: {
     mention: 'tomeQAtomek',
     email: 't.jakobiec@selleo.com'
   },
-  47280031890667: {
-    mention: 'Ania Pawlik',
-    email: 'a.pawlik@selleo.com'
-  },
-  4402052972185: {
-    mention: 'Mateo',
-    email: 'm.pekala@selleo.com'
-  },
-  5501524328654: {
-    mention: 'Grzegorz Laszczak',
-    email: 'g.laszczak@selleo.com'
-  }
 }
 
 export default id => {
