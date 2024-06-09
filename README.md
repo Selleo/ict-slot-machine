@@ -2,28 +2,23 @@
 
 ## Prerequisites
 
+[asdf](https://asdf-vm.com/guide/getting-started.html#_3-install-asdf)
+
+## Redis
+
+https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/install-redis-on-linux/
+
+## Build
+
+Run:
+
 ```
-sudo apt install unclutter
+yarn build
 ```
 
+And copy `dist/` to the Raspberry Pi.
 
 ## Services setup
-
-### /lib/systemd/system/kiosk-cursor.service
-
-```conf
-[Unit]
-Description=Hide cursor
-After=systemd-user-sessions.service
-
-[Service]
-ExecStart=/usr/bin/unclutter -idle 1
-User=pi
-Group=pi
-
-[Install]
-Alias=kiosk-cursor.service
-```
 
 ### /lib/systemd/system/kiosk.service
 
@@ -31,7 +26,7 @@ Alias=kiosk-cursor.service
 [Unit]
 Description=Kiosk
 After=systemd-user-sessions.service
-Requires=redis.service
+Requires=redis-server.service
 
 [Service]
 WorkingDirectory=/home/pi/projects/oab/
@@ -47,33 +42,12 @@ Alias=kiosk.service
 WantedBy=multi-user.target
 ```
 
-### /lib/systemd/system/kiosk-uploader.service
-
-```conf
-[Unit]
-Description=Kiosk Uploader
-After=systemd-user-sessions.service
-Requires=redis.service
-
-[Service]
-WorkingDirectory=/home/pi/services/
-ExecStart=/home/pi/services/uploader --watch-dir /home/pi/services/data --log-file /home/pi/services/logs/uploader.log
-IgnoreSIGPIPE=false
-Type=simple
-
-[Install]
-Alias=kiosk-uploader.service
-WantedBy=multi-user.target
-```
-
 Enable & start services:
 
 ```bash
-systemctl --system daemon-reload # reload configs
-systemctl enable kiosk
-systemctl start kiosk
-systemctl enable kiosk-cursor
-systemctl start kiosk-cursor
+sudo systemctl --system daemon-reload # reload configs
+sudo systemctl enable kiosk
+sudo systemctl start kiosk
 ```
 
 ### ~/.config/autostart/chromium.desktop
@@ -83,7 +57,7 @@ systemctl start kiosk-cursor
 Version=1.0
 Type=Application
 Name=Kiosk
-Exec=/usr/bin/chromium-browser --kiosk --incognito  http://localhost:3000
+Exec=bash -c "sleep 60 && /usr/bin/chromium-browser --kiosk --incognito http://localhost:8080"
 ```
 
 Reboot and check if services are working:

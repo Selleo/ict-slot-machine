@@ -1,8 +1,11 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { createRoot } from 'react-dom/client'
 import Game from './components/Game'
 
 import './styles/game'
 import 'react-toastify/dist/ReactToastify.min.css'
 
-ReactDOM.render(<Game />, document.getElementById('game'))
+const container = document.getElementById('game')
+const root = createRoot(container)
+
+root.render(<Game />)
