@@ -11,7 +11,7 @@ class Slot extends React.Component {
   }
 
   _getIcon() {
-    return require(`../images/icon-${this.props.number}.png`)
+    return new URL(`../images/icon-${this.props.number}.png`, import.meta.url).href
   }
 
   render() {

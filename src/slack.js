@@ -1,5 +1,5 @@
 import SlackWebhook from 'slack-webhook'
-import { times, join } from 'lodash'
+import { join, times } from 'lodash-es'
 
 export default class Slack {
   constructor(webhook, logWebhook) {

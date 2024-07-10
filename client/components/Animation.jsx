@@ -1,5 +1,5 @@
 import React from 'react'
-import random from 'lodash/random'
+import { random } from 'lodash-es'
 
 export default class Animation extends React.Component {
   _setAnimation(position) {
