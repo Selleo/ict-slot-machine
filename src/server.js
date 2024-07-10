@@ -1,24 +1,26 @@
-require('dotenv').config()
+import dotenv from 'dotenv'
+
+dotenv.config()
 
 import express from 'express'
-import getUser from './users'
+import getUser from './users.js'
 import { createServer } from 'http'
-import reader, { parseData } from './rfid'
+import reader, { parseData } from './rfid.js'
 import { createClient } from 'redis'
 import moment from 'moment'
-// import servo from './servo'
-// import sendPhoto from './queue'
-import Slack from './slack'
+// import servo from './servo.js'
+// import sendPhoto from './queue.js'
+import Slack from './slack.js'
 import { Server } from 'socket.io'
 // import takePhoto from './camera'
-import slackApiRequest from './slackApiRequest'
+import slackApiRequest from './slackApiRequest.js'
 
 const app = express()
 const server = createServer(app)
 
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:8080"
+    origin: ["http://localhost:5173", "http://localhost:8080"]
   }
 })
 const redisClient = createClient()

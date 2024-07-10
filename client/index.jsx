@@ -1,8 +1,8 @@
 import React from 'react'
 import { createRoot } from 'react-dom/client'
-import Game from './components/Game'
+import Game from './components/Game.jsx'
 
-import './styles/game'
+import './styles/game.scss'
 import 'react-toastify/dist/ReactToastify.min.css'
 
 const container = document.getElementById('game')
