@@ -13,7 +13,7 @@ https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/install
 Run:
 
 ```
-yarn build
+pnpm build
 ```
 
 And copy `dist/` to the Raspberry Pi.
