@@ -8,11 +8,8 @@ import { createServer } from 'http'
 import reader, { parseData } from './rfid.js'
 import { createClient } from 'redis'
 import moment from 'moment'
-// import servo from './servo.js'
-// import sendPhoto from './queue.js'
 import Slack from './slack.js'
 import { Server } from 'socket.io'
-// import takePhoto from './camera'
 import slackApiRequest from './slackApiRequest.js'
 
 const app = express()
@@ -55,10 +52,6 @@ const run = async () => {
         readyForSpin = false
         socketClient.emit('SPIN_REQUEST')
         addSlackReminder(user)
-
-        // takePhoto(userId).then(_ => {
-        //   sendPhoto(user.email, userId)
-        // })
       } else {
         socketClient.emit('NOTIFY', 'error', _generateCooldownMessage(response))
       }
@@ -96,7 +89,6 @@ const run = async () => {
       readyForSpin = true
 
       if (result.win) {
-        // if (result.cashPrize) servo.move()
         slack.post(user.mention, result.icon, result.cashPrize ? '5' : '2!')
       }
     })
