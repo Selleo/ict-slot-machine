@@ -37,7 +37,7 @@ const run = async () => {
 
   const rollRequest = async (userId) => {
     if (readyForSpin) {
-      user = Api.getUser(userId)
+      user = await Api.getUser(userId)
 
       if (user === undefined) {
         // slack.log(userId)
