@@ -3,9 +3,9 @@ import dotenv from 'dotenv'
 dotenv.config()
 
 import express from 'express'
-import getUser from './users.js'
 import { createServer } from 'http'
 import reader, { parseData } from './rfid.js'
+import Api from './api.js'
 import { createClient } from 'redis'
 import moment from 'moment'
 import Slack from './slack.js'
@@ -33,9 +33,11 @@ const run = async () => {
 
   server.listen(3000)
 
+  Api.login();
+
   const rollRequest = async (userId) => {
     if (readyForSpin) {
-      user = getUser(userId)
+      user = Api.getUser(userId)
 
       if (user === undefined) {
         // slack.log(userId)
