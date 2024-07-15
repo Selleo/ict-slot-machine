@@ -9,8 +9,8 @@
     "preview": "vite preview",
     "build": "vite build",
     "server": "nodemon --exec babel-node src/server.js --ignore client",
-    "start": "concurrently \"pnpm server\" \"pnpm client\"",
-    "start-prod": "concurrently \"pnpm server\" \"pnpm exec serve dist/ -p 8080\""
+    "start": "concurrently \"pnpm run server\" \"pnpm run client\"",
+    "start-prod": "concurrently \"pnpm run server\" \"pnpm exec serve dist/ -p 8080\""
   },
   "author": "c4",
   "license": "MIT",
