@@ -91,7 +91,7 @@ const run = async () => {
       readyForSpin = true
 
       if (result.win) {
-        slack.post(user.mention, result.icon, result.cashPrize ? '5' : '2!')
+        slack.post(user.mention, result.icon, result.cashPrize ? '5' : '2')
       }
     })
   })
