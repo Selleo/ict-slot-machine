@@ -2,4 +2,4 @@
 . "/home/pi/.asdf/asdf.sh"
 . "/home/pi/.asdf/completions/asdf.bash"
 
-pnpm start-prod
+pnpm run start-prod
