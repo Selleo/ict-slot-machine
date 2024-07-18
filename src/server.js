@@ -40,7 +40,7 @@ const run = async () => {
       user = await Api.getUser(userId)
 
       if (user === undefined) {
-        // slack.log(userId)
+        slack.log(userId)
         socketClient.emit('NOTIFY', 'error', 'please go to @dloranc')
         return
       }
