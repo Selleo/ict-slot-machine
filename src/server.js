@@ -41,7 +41,7 @@ const run = async () => {
 
       if (user === undefined) {
         slack.log(userId)
-        socketClient.emit('NOTIFY', 'error', 'please go to @dloranc')
+        socketClient.emit('NOTIFY', 'error', 'Your card key is not in the system. Contact @dloranc please.')
         return
       }
 
