@@ -64,3 +64,12 @@ Reboot and check if services are working:
 ```bash
 systemctl status kiosk
 ```
+
+### Raspberry Pi 5
+Currently you can't install Redis from apt repository because it's compiled for the systems that have a different page size than Raspberry Pi OS has (16 kB).
+
+You have to install Redis from sourse:
+https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/install-redis-from-source/
+
+And configure it properly:
+https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/#install-redis-properly
