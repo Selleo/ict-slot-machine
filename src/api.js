@@ -39,10 +39,8 @@ class Api {
 
       if (response.ok) {
         return await response.json();
-      }
-
-      if (response.status === 401 && retryCount < 3) {
-        console.log('Authentication failed. Retrying login...');
+      } else if (retryCount < 3) {
+        console.error('Authentication failed. Retrying login...');
         try {
           await Api.login();
           return Api.getUser(rfidKey, retryCount + 1);
@@ -50,6 +48,8 @@ class Api {
           console.error('Retry login failed:', loginError.message);
           throw loginError;
         }
+      } else {
+        throw new Error('Failed to authenticate.');
       }
     } catch (error) {
       console.error('Failed to get RFID data:', error.message);
