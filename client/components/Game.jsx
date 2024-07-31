@@ -1,7 +1,7 @@
 import React from 'react'
-import Roller from './Roller'
+import Roller from './Roller.jsx'
 import socketIOClient from 'socket.io-client'
-import { resultResponse } from '../modules/result'
+import { resultResponse } from '../modules/result.js'
 import { ToastContainer, toast } from 'react-toastify'
 
 const ROLLERS = ['left', 'center', 'right']
@@ -19,7 +19,7 @@ export default class Game extends React.Component {
   }
 
   componentDidMount() {
-    this.socket.on('SPIN_REQUEST', forcedSpinTo => this._spinMachine(forcedSpinTo))
+    this.socket.on('SPIN_REQUEST', (forcedSpinTo) => this._spinMachine(forcedSpinTo))
     this.socket.on('NOTIFY', (type, message) => toast[type](message))
   }
 
@@ -50,8 +50,7 @@ export default class Game extends React.Component {
   render() {
     return (
       <div className="rollers">
-        <div style={{background:'hotpink',position:'absolute',zIndex:'1333',top:'50px',left: '50%'}}><button onClick={()=>this.socket.emit('SPIN_REQUEST')}>test</button></div>
-        <ToastContainer autoClose={5000} position={toast.POSITION.TOP_CENTER} />
+        <ToastContainer autoClose={5000} position="top-left" />
         <div className="overlay" />
         {this._createRollers()}
       </div>

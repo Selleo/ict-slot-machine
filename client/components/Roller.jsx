@@ -1,10 +1,9 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { createRoot } from 'react-dom/client'
 import Slot from './Slot'
 import Animation from './Animation'
 import Polygon, { getR } from '../modules/polygon'
-import times from 'lodash/times'
-import random from 'lodash/random'
+import { random, times } from 'lodash-es'
 
 export default class Roller extends React.Component {
   constructor(props) {
@@ -12,6 +11,12 @@ export default class Roller extends React.Component {
 
     this.polygon = new Polygon(props.height, props.count)
     this.spin = this.spin.bind(this)
+  }
+
+  componentDidMount() {
+    const { position } = this.props
+    const container = document.querySelector(`.styles-roller-${position}`)
+    this.root = createRoot(container)
   }
 
   spin(startingIndex = 0, forcedSpinTo) {
@@ -31,14 +36,13 @@ export default class Roller extends React.Component {
         { once: true }
       )
 
-      ReactDOM.render(
+      this.root.render(
         <Animation
           startingIndex={startingIndex}
           position={position}
           rotations={rotations}
           angle={this.polygon.angle}
-        />,
-        document.querySelector(`.styles-roller-${position}`)
+        />
       )
     })
   }
