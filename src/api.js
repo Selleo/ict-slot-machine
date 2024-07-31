@@ -53,6 +53,7 @@ class Api {
       }
     } catch (error) {
       console.error('Failed to get RFID data:', error.message);
+      console.error(error);
     }
   }
 }
