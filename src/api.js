@@ -1,5 +1,11 @@
+const RETRY_DELAY = 500
+
 class Api {
   static authToken = '';
+
+  static async delay() {
+    return new Promise(resolve => setTimeout(resolve, RETRY_DELAY));
+  }
 
   static async login() {
     try {
@@ -40,8 +46,9 @@ class Api {
       if (response.ok) {
         return await response.json();
       } else if (retryCount < 3) {
-        console.error('Authentication failed. Retrying login...');
+        console.error(`Authentication failed. Retrying login in ${RETRY_DELAY}ms...`);
         try {
+          await Api.delay();
           await Api.login();
           return Api.getUser(rfidKey, retryCount + 1);
         } catch (loginError) {
