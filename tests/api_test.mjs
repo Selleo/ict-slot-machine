@@ -1,4 +1,4 @@
-import Api from './src/api.js'
+import Api from '../src/api.js'
 
 console.log(process.env.URL, process.env.USER, process.env.PASSWORD)
 
