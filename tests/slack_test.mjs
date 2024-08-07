@@ -1,4 +1,4 @@
-import Slack from './src/slack.js'
+import Slack from '../src/slack.js'
 
 const slack = new Slack(process.env.SLACK_LOG_WEBHOOK)
 
