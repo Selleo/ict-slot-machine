@@ -22,6 +22,18 @@ const io = new Server(server, {
 })
 const redisClient = createClient()
 
+let users = await Api.getUsers();
+
+const INTERVAL = 60 * 60 * 1000;
+
+setInterval(async () => {
+  try {
+    users = await Api.getUsers();
+  } catch (e) {
+    console.error(e);
+  }
+}, INTERVAL);
+
 const run = async () => {
   await redisClient.connect()
   const slack = new Slack(process.env.SLACK_WEBHOOK, process.env.SLACK_LOG_WEBHOOK)
@@ -37,7 +49,7 @@ const run = async () => {
 
   const rollRequest = async (userId) => {
     if (readyForSpin) {
-      user = await Api.getUser(userId)
+      user = users.find((u) => u.rfid_key === userId)
 
       if (user === undefined) {
         slack.log(userId)
