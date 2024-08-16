@@ -27,7 +27,11 @@ const INTERVAL = 60 * 60 * 1000;
 
 setInterval(async () => {
   try {
-    users = await Api.getUsers();
+    const newUsers = await Api.getUsers();
+
+    if (newUsers.length > 0) {
+      users = newUsers;
+    }
   } catch (e) {
     console.error(e);
   }
@@ -101,7 +105,7 @@ const run = async () => {
       readyForSpin = true
 
       if (result.win) {
-        slack.post(user.mention, result.icon, result.cashPrize ? '5' : '2')
+        slack.post(user.slack_user_id, result.icon, result.cashPrize ? '5' : '2')
       }
     })
   })
