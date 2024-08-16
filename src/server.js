@@ -10,7 +10,6 @@ import { createClient } from 'redis'
 import moment from 'moment'
 import Slack from './slack.js'
 import { Server } from 'socket.io'
-import slackApiRequest from './slackApiRequest.js'
 
 const app = express()
 const server = createServer(app)
@@ -65,7 +64,6 @@ const run = async () => {
         })
         readyForSpin = false
         socketClient.emit('SPIN_REQUEST')
-        addSlackReminder(user)
       } else {
         socketClient.emit('NOTIFY', 'error', _generateCooldownMessage(response))
       }
@@ -107,21 +105,6 @@ const run = async () => {
       }
     })
   })
-
-  const addSlackReminder = (user) => {
-    if ('string' !== typeof user.slackUserId) {
-      return
-    }
-
-    slackApiRequest({
-      command: 'reminders.add',
-      body: {
-        text: 'about using One Armed Bandit again',
-        time: `in ${ROLL_COOLDOWN} seconds`,
-        user: user.slackUserId
-      }
-    })
-  }
 
   reader.on('data', data => {
     const userId = parseData(data)
