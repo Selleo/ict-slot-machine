@@ -73,3 +73,31 @@ https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/install
 
 And configure it properly:
 https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/#install-redis-properly
+
+Remember to change the configuration of the kiosk if you use above tutorial without a change of the service's name. You have to replace this line:
+
+```
+Requires=redis-server.service
+```
+
+With:
+
+```
+Requires=redis_6379.service
+```
+
+### Raspberry Pi 4
+
+If you encounter this error using Raspberry Pi 4:
+
+```
+rpi_touchscreen_attiny 10-0045: Unknown Atmel firmware revision: 0xe1
+```
+
+You can try to add to `/boot/firmware/config.txt` this line:
+
+```
+dtparam=i2c_vc_baudrate=50000
+```
+
+It will change the baud rate of the display screen.
